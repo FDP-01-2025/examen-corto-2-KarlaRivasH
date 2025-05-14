@@ -18,7 +18,7 @@ int main()
         cout << "1. Estudiante" << endl
              << "2. Profesional" << endl
              << "3. Ver todos" << endl;
-        cout << "Ingrese el tipo de usuario:  ";
+        cout << "Ingrese el tipo de usuario(escrito):  ";
         cin >> categoria;
         // Permitir escribiri la categoria que desea al usuario
         if (categoria == "Estudiante" || categoria == "estudiante")
