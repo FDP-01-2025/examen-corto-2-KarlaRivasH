@@ -77,6 +77,7 @@ int main()
             // seleccionar una opcion del menu de los profesionales
             switch (profesional)
             {
+                //Para el caso 1 de laptop avanzada
             case 1:
                 cout << "Saldo disponible: " << dinero << endl;
                 // Calculando el descuento al producto y verificando si le alcanza al usuario
@@ -94,10 +95,10 @@ int main()
                 }
 
                 break;
+                //para el caso 2 de tablet pro
             case 2:
                 cout << "Saldo disponible: " << dinero << endl;
                 // Calculando el descuento al producto y verificando si le alcanza al usuario
-
                 restante = dinero - (1200 - (1200 * 0.10));
 
                 if (restante < 0)
@@ -112,12 +113,11 @@ int main()
                 }
 
                 break;
+                //para el caso 3 de estacion de trabajo 
             case 3:
                 cout << "Saldo disponible: " << dinero << endl;
                 // Calculando el descuento al producto y verificando si le alcanza al usuario
-
                 restante = dinero - (2000 - (2000 * 0.10));
-
                 if (restante < 0)
                 {
                     cout << "No fue posible realizar la compra" << endl;
@@ -133,7 +133,6 @@ int main()
 
             default:
                 cout << "Opcion invalida" << endl;
-
                 break;
             }
         }
