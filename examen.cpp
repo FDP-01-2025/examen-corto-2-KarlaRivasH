@@ -3,21 +3,24 @@ using namespace std;
 
 int main()
 {
+    // Declarando todas las variables a utilizar
     int edad, estudiante, profesional, todo, opcion, dinero = 1000, restante;
 
     string categoria;
 
     cout << "Porfavor ingrese su edad: ";
     cin >> edad;
+    // si la edad es mayor a 16 o igual, puede ingresar
     if (edad >= 16)
     {
+        // Mostrar categorias que hay
         cout << "Bienvenido usted, es apto para comprar, ¿En que categoria desea comprar? " << endl;
         cout << "1. Estudiante" << endl
              << "2. Profesional" << endl
              << "3. Ver todos" << endl;
         cout << "Ingrese el tipo de usuario:  ";
         cin >> categoria;
-
+        // Permitir escribiri la categoria que desea al usuario
         if (categoria == "Estudiante" || categoria == "estudiante")
         {
             cout << "Para Estudiantes (descuento del 20%):" << endl;
@@ -26,9 +29,10 @@ int main()
                  << "3. Chromebook: $" << 700 - (700 * 0.20) << endl;
             cout << "Seleccione un dispositivo:  ";
             cin >> estudiante;
-
+            // Si es estudiante mostrar el menu de estudiante y que selecciones una opcion del menu
             switch (estudiante)
             {
+                // Para la laptop
             case 1:
                 cout << "Saldo disponible: " << dinero << endl;
                 restante = dinero - (900 - (900 * 0.20));
@@ -37,6 +41,7 @@ int main()
                 cout << "Saldo restante: " << restante << endl;
 
                 break;
+                // para la tablet
             case 2:
                 cout << "Saldo disponible: " << dinero << endl;
                 restante = dinero - (600 - (600 * 0.20));
@@ -44,6 +49,7 @@ int main()
                 cout << "Compra exitosa, usted ha comprado: Tablet estudiantil" << endl;
                 cout << "Saldo restante: " << restante << endl;
                 break;
+                // para el chromebook
             case 3:
                 cout << "Saldo disponible: " << dinero << endl;
                 restante = dinero - (700 - (700 * 0.20));
@@ -58,6 +64,7 @@ int main()
                 break;
             }
         }
+        // Si es un profesional mostrar el menu de los profesionales
         else if (categoria == "Profesional" || categoria == "profesional")
         {
 
@@ -67,10 +74,12 @@ int main()
                  << "3. Estación de Trabajo: $" << 2000 - (2000 * 0.10) << endl;
             cout << "Seleccione un dispositivo:  ";
             cin >> profesional;
+            // seleccionar una opcion del menu de los profesionales
             switch (profesional)
             {
             case 1:
                 cout << "Saldo disponible: " << dinero << endl;
+                // Calculando el descuento al producto y verificando si le alcanza al usuario
                 restante = dinero - (1500 - (1500 * 0.10));
 
                 if (restante < 0)
@@ -87,6 +96,8 @@ int main()
                 break;
             case 2:
                 cout << "Saldo disponible: " << dinero << endl;
+                // Calculando el descuento al producto y verificando si le alcanza al usuario
+
                 restante = dinero - (1200 - (1200 * 0.10));
 
                 if (restante < 0)
@@ -103,6 +114,8 @@ int main()
                 break;
             case 3:
                 cout << "Saldo disponible: " << dinero << endl;
+                // Calculando el descuento al producto y verificando si le alcanza al usuario
+
                 restante = dinero - (2000 - (2000 * 0.10));
 
                 if (restante < 0)
@@ -124,6 +137,7 @@ int main()
                 break;
             }
         }
+        //Opcione de ver el menu completo
         else if (categoria == "Ver todos" || categoria == "ver" || categoria == "ver todos")
         {
             cout << "Todas las opciones" << endl;
@@ -139,6 +153,8 @@ int main()
             cout << "Esa no es una opcion valida" << endl;
         }
     }
+    // Si la edad es menor a 16, el estudiante no puede realizar ninguna actividad
+
     else if (edad > 0 && edad < 16)
     {
         cout << "Lo siento usted no es apto para comprar";
